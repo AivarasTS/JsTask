@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  box-shadow: 1px 1px 3px 3px #5188fd;
+  background: transparent;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+/* Home page button */
+nav #navButton {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #288df8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 1s;
+  border: none;
+  position: relative;
+}
+
+nav #navButton:hover {
+  background-color: #0052f7;
+  padding-left: 40px;
+}
+
+nav #navButton:after {
+  content: '<<';
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  transition: opacity 1s, left 1s;
+}
+
+nav #navButton:hover:after {
+  opacity: 1;
+  left: 10px;
+}
+
+/* Submit button */
+form #submitButton {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #288df8;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#submitButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#submitButton:hover {
+  background-color: #0056b3;
+}
+
+#submitButton span:after {
+  content: '>>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#submitButton:hover span {
+  padding-right: 25px;
+}
+
+#submitButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+nav h2 {
+  color: #00ff40;
+}
+
+#textFilter {
+  color: #eb0e0e;
+  font-size: 26px;
+}
+
+/* Screen effect after listing an item */
+#screenEffect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+#successMessage {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/* Mdia queries for smaller screens */
+/* Adjustments for iPad 9th gen */
+@media only screen
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+      font-size: 16px;
+    }
+    form {
+      max-width: 90%;
+
+    }
+    label {
+      font-size: 18px;
+    }
+    nav {
+      margin-top: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 20%;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .home-page-button {
+      display: flex;
+      justify-content: center;
+    }
+    .background {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    #submitButton {
+      position: absolute;
+      bottom: 7.5%;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+/* Adjustments for iPhone 12 Pro */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    body {
+      font-size: 14px;
+    }
+    form {
+      justify-content: center;
+      max-width: 80%;
+    }
+    label {
+      font-size: 16px;
+    }
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      padding: 6px;
+    }
+  
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .background {
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+    }
+    nav {
+      margin-top: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 20%;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .home-page-button {
+      display: flex;
+      justify-content: center;
+    }
+    #submitButton {
+      position: absolute;
+      bottom: 12.5%;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}

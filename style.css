@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+body {
+  background-image: url("https://i.postimg.cc/J0rQ2Hdm/gif.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.banner-image {
+  background-image: url("https://i.postimg.cc/XqKYppVZ/banner.png");
+  margin-top: 1.5%;
+  margin-bottom: 1%;
+  margin-left: 35%;
+  background-repeat: no-repeat;
+  height: 190px;
+  background-position: center;
+}
+
+.game-card {
+  font-family: "Pixelify Sans", sans-serif;
+  color: #00aeff;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 3%;
+  width: 225px;
+  display: inline-block;
+  position: relative;
+  max-height: 450px;
+}
+
+.game-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-image: url("https://i.postimg.cc/J0rQ2Hdm/gif.gif");
+  background-size: cover;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.game-poster {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 210px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.list-item {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: none;
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #288df8;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+footer {
+  background-color: #181717;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: auto;
+  width: 100%;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
+
+.footer-section h3 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #008cff;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .banner-image {
+    display: none;
+  }
+  game-card {
+    display: flex;
+    justify-content: center;
+    row-gap: 10px;
+  }
+  .list-item {
+    position: relative;
+    left: 50%;
+    width: 135px;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .banner-image {
+    display: none;
+  }
+  .list-item {
+    width: 200px;
+    max-height: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */
