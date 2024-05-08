@@ -70,7 +70,7 @@ whereToBuy.addEventListener('input', checkForExplicitWords)
 
 function checkForExplicitWords(event) {
     const inputText = event.target.value
-    const explicitWords = ['nigger', 'gaidys', 'ni66er', 'n1gg3r', 'nigga'] // An array of explicit words
+    const explicitWords = ['n word', 'b word', 'i word', '', ''] // An array of explicit words
     let hasExplicitWord = false
 
     explicitWords.forEach(word => {
@@ -84,6 +84,6 @@ function checkForExplicitWords(event) {
     if (hasExplicitWord) {
         textFilter.textContent = 'Please remain polite'
     } else {
-        textFilter.textContent = '' // Clear message if no explicit word
+        textFilter.textContent = ''
     }
 }
